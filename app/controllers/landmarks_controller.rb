@@ -12,19 +12,19 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
 
     erb :'landmarks/:id'
-  end 
+  end
 
-  get '/landmarks/:id' do 
+  get '/landmarks/:id' do
 
     erb :'landmarks/show'
   end
 
-  get '/landmarks/:id/edit' do 
+  get '/landmarks/:id/edit' do
 
     erb :'/landmarks/edit'
-  end 
+  end
 
-  patch '/landmarks/:id' do 
+  patch '/landmarks/:id' do
 
     redirect to "/landmarks/#{landmark.id}"
   end
