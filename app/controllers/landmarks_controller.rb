@@ -12,12 +12,11 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
     @landmark = Landmark.create(params[:landmark])
     @landmark.save
-
     erb :'landmarks/:id'
   end
 
   get '/landmarks/:id' do
-
+    @landmark = Landmark.find_by_id(params[:id])
     erb :'landmarks/show'
   end
 
